@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="my_test1_tree" model="ir.ui.view">
+            <field name="name">实验</field>
+            <field name="model">my_test1</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id" string="随便"/>
+                    <field name="num"/>
+                    <field name="date"/>
+                    <field name="jiage"/>
+                    <field name="name"/>
+                    <field name="guanlian"/>
+                    <field name="a"/>
+                    <field name="b"/>
+                </tree>
+            </field>
+        </record>
+        <record id="my_test1_form" model="ir.ui.view">
+            <field name="name">实验</field>
+            <field name="model">my_test1</field>
+            <field name="arch" type="xml">
+                    <form>
+                        <sheet>
+                            <group>
+                                <field name="num" readonly="1"/>
+                                <field name="date" required="1"/>
+                                <field name="name" invisible="1"/>
+                                <field name="jiage"/>
+                                <field name="guanlian"/>
+                                <field name="a"/>
+                                <field name="b"/>
+                            </group>
+                        </sheet>
+                    </form>
+            </field>
+        </record>
+        <act_window id="test2" name="shiyan2" res_model="my_test1" view_mode="tree,form"/>
+        <menuitem name="shiyan2" id="my_test1_window" parent="my_test_window" action="test2"/>
+    </data>
+</odoo>

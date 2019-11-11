@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record id="my_test_tree" model="ir.ui.view">
+            <field name="name">实验</field>
+            <field name="model">my_test</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"/>
+                    <field name="num"/>
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="sex"/>
+                    <field name="bool"/>
+                </tree>
+            </field>
+        </record>
+        <record id="my_test_form" model="ir.ui.view">
+            <field name="name">实验</field>
+            <field name="model">my_test</field>
+            <field name="arch" type="xml">
+                    <form>
+                        <header>
+                            <button name="say" string="打印" type="object" class="btn-primary"/>
+                        </header>
+                        <sheet>
+                            <group>
+                                <field name="id"/>
+                                <field name="num"/>
+                                <field name="date"/>
+                                <field name="name"/>
+                                <field name="sex"/>
+                                <field name="bool"/>
+                            </group>
+                            <notebook>
+                                <page string="明细行">
+                                    <field name="dtl">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="jiage"/>
+                                            <field name="date"/>
+                                            <field name="guanlian"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </sheet>
+                    </form>
+            </field>
+        </record>
+        <act_window id="test1" name="shiyan" res_model="my_test" view_mode="tree,form"/>
+        <menuitem name="shiyan1" id="my_test_window" action="test1"/>
+    </data>
+</odoo>
