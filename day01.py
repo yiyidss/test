@@ -57,5 +57,5 @@ L=list(map(func,['asdas','ASDA','sfsdASD']))
 print(L)
 
 '''
-啥意思。。。？
+啥意思。。？
 '''
